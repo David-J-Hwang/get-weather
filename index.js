@@ -1,7 +1,6 @@
 // API_KEY = ac1d3a2c91c6775a8e53b92b7fc6ebca
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 // https://api.openweathermap.org/data/2.5/weather?lat=57&lon=-2.15&appid={API key}&units=metric
-
 // https://api.openweathermap.org/data/2.5/weather?q=Ulsan&appid=ac1d3a2c91c6775a8e53b92b7fc6ebca&units=metric
 // https://api.openweathermap.org/data/2.5/weather?q=moscow&appid=ac1d3a2c91c6775a8e53b92b7fc6ebca&units=metric
 
@@ -85,22 +84,14 @@ async function checkWeather(city) {
   }
 }
 
+// 돋보기 모양의 search button 클릭 시 checkWeather 함수 실행
 searchBtn.addEventListener('click', () => {
   checkWeather(searchBox.value)
 })
 
+// 엔터키 입력시 checkWeather 함수 실행
 document.addEventListener('keypress', (event) => {
   if(event.key === 'Enter') {
     checkWeather(searchBox.value)
   }
 })
-
-
-
-
-
-
-// console.log(`City name: ${data.name}`)
-// console.log(`Temperature: ${Math.round(data.main.temp)}°C`)
-// console.log(`Humidity: ${Math.round(data.main.humidity)}%`)
-// console.log(`Wind speed: ${Math.round(data.wind.speed)} km/h`)
